@@ -1,0 +1,13 @@
+# robots.txt for Governor Crest Limited
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /config/
+Disallow: /includes/
+Disallow: /test_connection.php
+
+# Sitemap location
+Sitemap: https://www.governorcrestlimited.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

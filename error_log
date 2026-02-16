@@ -1,0 +1,24 @@
+[02-Dec-2025 05:16:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Too many connections in /home/governor/public_html/config/database.php:9
+Stack trace:
+#0 /home/governor/public_html/config/database.php(9): mysqli->__construct()
+#1 /home/governor/public_html/index.php(12): require_once('/home/governor/...')
+#2 {main}
+  thrown in /home/governor/public_html/config/database.php on line 9
+[02-Dec-2025 05:16:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Too many connections in /home/governor/public_html/config/database.php:9
+Stack trace:
+#0 /home/governor/public_html/config/database.php(9): mysqli->__construct()
+#1 /home/governor/public_html/index.php(12): require_once('/home/governor/...')
+#2 {main}
+  thrown in /home/governor/public_html/config/database.php on line 9
+[14-Jan-2026 07:42:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Too many connections in /home/governor/public_html/config/database.php:9
+Stack trace:
+#0 /home/governor/public_html/config/database.php(9): mysqli->__construct('localhost', 'governor_crest', '?(dRyRrx!n1I', 'governor_crest')
+#1 /home/governor/public_html/index.php(12): require_once('/home/governor/...')
+#2 {main}
+  thrown in /home/governor/public_html/config/database.php on line 9
+[16-Jan-2026 21:15:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Too many connections in /home/governor/public_html/config/database.php:9
+Stack trace:
+#0 /home/governor/public_html/config/database.php(9): mysqli->__construct('localhost', 'governor_crest', '?(dRyRrx!n1I', 'governor_crest')
+#1 /home/governor/public_html/index.php(12): require_once('/home/governor/...')
+#2 {main}
+  thrown in /home/governor/public_html/config/database.php on line 9
