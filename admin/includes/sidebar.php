@@ -1,6 +1,7 @@
 <div class="sidebar">
-    <div class="sidebar-brand">
-        <i class="bi bi-shield-check me-2"></i>Admin Panel
+    <div class="sidebar-brand d-flex justify-content-between align-items-center">
+        <span><i class="bi bi-shield-check me-2"></i>Admin Panel</span>
+        <button type="button" class="btn-close btn-close-white d-lg-none" id="sidebarCloseBtn" aria-label="Close"></button>
     </div>
     <ul class="sidebar-menu">
         <li>

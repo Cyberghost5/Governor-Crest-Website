@@ -350,7 +350,7 @@ include 'includes/header.php';
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <h2 class="display-5 fw-bold text-white mb-3">Seats Are Limited. Reserve Yours Today!</h2>
-                <p class="fs-5 text-muted mb-4">
+                <p class="fs-5 mb-4">
                     Registration is 100% Free. Secure your ticket now to get your unique QR code ticket sent directly to your email.
                 </p>
                 <button type="button" class="btn btn-warning btn-lg px-5 py-3 fw-bold rounded-pill shadow-lg" data-bs-toggle="modal" data-bs-target="#registrationModal">
