@@ -23,6 +23,9 @@
                     <a class="nav-link <?php echo ($current_page == 'projects') ? 'active' : ''; ?>" href="projects">Projects</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link <?php echo ($current_page == 'conference') ? 'active' : ''; ?>" href="conference">Conference 2026</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link <?php echo ($current_page == 'book') ? 'active' : ''; ?>" href="book">Book Appointment</a>
                 </li>
                 <li class="nav-item">

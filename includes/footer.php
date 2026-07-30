@@ -29,6 +29,7 @@
                     <li><a href="./" class="text-muted text-decoration-none">Home</a></li>
                     <li><a href="about" class="text-muted text-decoration-none">About Us</a></li>
                     <li><a href="services" class="text-muted text-decoration-none">Our Services</a></li>
+                    <li><a href="conference" class="text-muted text-decoration-none">Real Estate Conference 2026</a></li>
                     <li><a href="contact" class="text-muted text-decoration-none">Contact Us</a></li>
                     <li><a href="book" class="text-muted text-decoration-none">Book Appointment</a></li>
                 </ul>
