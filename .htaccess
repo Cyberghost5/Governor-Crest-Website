@@ -21,8 +21,9 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.*)$ $1.html [L]
 
-# Redirect from .php to non-.php
-RewriteCond %{THE_REQUEST} ^[A-Z]+\ /([^.\ ]+)\.php
+# Redirect from .php to non-.php (Only for GET requests)
+RewriteCond %{REQUEST_METHOD} GET
+RewriteCond %{THE_REQUEST} ^GET\ /([^.\ ]+)\.php
 RewriteRule ^(.*)\.php$ /$1 [R=301,L]
 
 # Redirect from .html to non-.html

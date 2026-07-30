@@ -490,15 +490,34 @@ document.addEventListener('DOMContentLoaded', function() {
             formAlert.classList.add('d-none');
 
             const formData = new FormData(regForm);
+            formData.append('is_ajax', '1');
 
             fetch('includes/conference-handler.php', {
                 method: 'POST',
                 headers: {
-                    'X-Requested-With': 'XMLHttpRequest'
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'
                 },
                 body: formData
             })
-            .then(response => response.json())
+            .then(async response => {
+                const text = await response.text();
+                try {
+                    return JSON.parse(text);
+                } catch (e) {
+                    console.error("Non-JSON response received:", text);
+                    // Check if ticket code/URL was generated in text response
+                    if (text.includes("conference-ticket") || text.includes("GCR-CONF-")) {
+                        const match = text.match(/conference-ticket(\.php)?\?code=([A-Za-z0-9-]+)/);
+                        if (match) {
+                            return { success: true, redirect: match[0] };
+                        }
+                    }
+                    // Strip HTML tags if PHP error string was outputted
+                    const cleanMsg = text.replace(/<[^>]*>?/gm, '').trim();
+                    return { success: false, message: cleanMsg.substring(0, 200) || "Server returned invalid response. Please try again." };
+                }
+            })
             .then(data => {
                 if (data.success && data.redirect) {
                     window.location.href = data.redirect;
@@ -511,9 +530,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             })
             .catch(err => {
-                console.error(err);
-                // Fallback to normal form submission if fetch fails
-                regForm.submit();
+                console.error("Fetch error:", err);
+                btnSubmit.disabled = false;
+                btnSubmit.innerHTML = '<i class="bi bi-ticket-perforated-fill me-2"></i> Register Now & Get QR Code Ticket';
+                formAlert.className = 'alert alert-danger mt-3 mb-0';
+                formAlert.innerText = 'Network error or server unavailable. Please try again.';
+                formAlert.classList.remove('d-none');
             });
         });
     }

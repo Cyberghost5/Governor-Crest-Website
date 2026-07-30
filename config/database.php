@@ -12,11 +12,21 @@ define('DB_PASS', '');
 define('DB_NAME', 'governorcrest'); 
 
 // Create connection
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+$conn = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-// Check connection
+// Check connection and auto-create database if it doesn't exist
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    $tmp_conn = @new mysqli(DB_HOST, DB_USER, DB_PASS);
+    if (!$tmp_conn->connect_error) {
+        $tmp_conn->query("CREATE DATABASE IF NOT EXISTS `" . DB_NAME . "` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci");
+        $tmp_conn->close();
+        $conn = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    }
+}
+
+// Check connection after retry
+if ($conn->connect_error) {
+    die("Database Connection Error: " . $conn->connect_error);
 }
 
 // Set charset
