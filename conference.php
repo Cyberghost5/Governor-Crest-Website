@@ -1,7 +1,46 @@
 <?php
 $current_page = 'conference';
-$page_title = 'Real Estate Conference 2026 - Governor Crest Limited';
-$page_description = 'Join Governor Crest Limited on August 15, 2026 at E4 Resorts, Bauchi for Nigeria\'s premier real estate conference. Impacting knowledge & answering all your real estate questions.';
+$page_title = 'Governor Crest Real Estate Conference 2026';
+$seo_title = 'Governor Crest Real Estate Conference 2026 | E4 Resorts Bauchi';
+$seo_description = 'Join Governor Crest Limited on August 15, 2026 at E4 Resorts, Bauchi, Bauchi State for Nigeria\'s premier real estate conference. Free registration, expert masterclasses, and live Q&A.';
+$seo_keywords = 'Governor Crest Real Estate Conference 2026, Bauchi real estate conference, real estate investment Nigeria, land title Bauchi, E4 Resorts Bauchi events, Governor Crest Limited';
+
+$structured_data = json_encode([
+    "@context" => "https://schema.org",
+    "@type" => "Event",
+    "name" => "Governor Crest Real Estate Conference 2026",
+    "startDate" => "2026-08-15T08:30:00+01:00",
+    "endDate" => "2026-08-15T15:00:00+01:00",
+    "eventAttendanceMode" => "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus" => "https://schema.org/EventScheduled",
+    "location" => [
+        "@type" => "Place",
+        "name" => "E4 Resorts",
+        "address" => [
+            "@type" => "PostalAddress",
+            "streetAddress" => "Off Bauchi Club Road",
+            "addressLocality" => "Bauchi",
+            "addressRegion" => "Bauchi State",
+            "addressCountry" => "NG"
+        ]
+    ],
+    "image" => [
+        "https://www.governorcrestlimited.com/images/logo.png"
+    ],
+    "description" => "A flagship real estate conference organized by Governor Crest Limited to impact knowledge about real estate and answer all questions relating to land acquisition and investment.",
+    "offers" => [
+        "@type" => "Offer",
+        "price" => "0",
+        "priceCurrency" => "NGN",
+        "availability" => "https://schema.org/InStock",
+        "url" => "https://www.governorcrestlimited.com/conference"
+    ],
+    "organizer" => [
+        "@type" => "Organization",
+        "name" => "Governor Crest Limited",
+        "url" => "https://www.governorcrestlimited.com"
+    ]
+], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 
 require_once 'config/database.php';
 
@@ -122,7 +161,7 @@ include 'includes/header.php';
                     <span class="text-warning text-uppercase fw-bold tracking-wider fs-6">Organized By Governor Crest Limited</span>
                     <h2 class="display-5 fw-bold text-dark mb-4 mt-2">Empowering Bauchi & Nigeria Through Real Estate Excellence</h2>
                     <p class="fs-6 text-muted mb-3">
-                        Organized by <strong>Governor Crest Limited</strong> — one of the leading and most trusted real estate companies in Bauchi State and Nigeria at large — this landmark conference brings together property investors, first-time home buyers, commercial developers, and industry experts.
+                        Organized by <strong>Governor Crest Limited</strong> - one of the leading and most trusted real estate companies in Bauchi State and Nigeria at large - this landmark conference brings together property investors, first-time home buyers, commercial developers, and industry experts.
                     </p>
                     <p class="fs-6 text-muted mb-4">
                         The core aim of this conference is to <strong>impact practical, actionable knowledge</strong> about real estate investments, land documentation, property appreciation strategies, and to <strong>answer every question you have regarding real estate</strong>.
@@ -393,8 +432,10 @@ include 'includes/header.php';
                         </div>
                     </div>
 
+                    <div id="formAlert" class="alert d-none mt-3 mb-0" role="alert"></div>
+
                     <div class="mt-4 pt-2">
-                        <button type="submit" class="btn btn-warning w-100 py-3 fw-bold rounded-3 shadow">
+                        <button type="submit" id="btnRegSubmit" class="btn btn-warning w-100 py-3 fw-bold rounded-3 shadow">
                             <i class="bi bi-ticket-perforated-fill me-2"></i> Register Now & Get QR Code Ticket
                         </button>
                     </div>
@@ -404,7 +445,7 @@ include 'includes/header.php';
     </div>
 </div>
 
-<!-- Countdown JS Script -->
+<!-- Countdown & Registration JS Script -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Conference Date: August 15, 2026 09:00:00
@@ -434,6 +475,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
+
+    // Registration Form AJAX Handler
+    const regForm = document.getElementById('conferenceRegForm');
+    const btnSubmit = document.getElementById('btnRegSubmit');
+    const formAlert = document.getElementById('formAlert');
+
+    if (regForm) {
+        regForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            btnSubmit.disabled = true;
+            btnSubmit.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> Generating Your QR Ticket...';
+            formAlert.classList.add('d-none');
+
+            const formData = new FormData(regForm);
+
+            fetch('includes/conference-handler.php', {
+                method: 'POST',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success && data.redirect) {
+                    window.location.href = data.redirect;
+                } else {
+                    btnSubmit.disabled = false;
+                    btnSubmit.innerHTML = '<i class="bi bi-ticket-perforated-fill me-2"></i> Register Now & Get QR Code Ticket';
+                    formAlert.className = 'alert alert-danger mt-3 mb-0';
+                    formAlert.innerText = data.message || 'An error occurred. Please try again.';
+                    formAlert.classList.remove('d-none');
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                // Fallback to normal form submission if fetch fails
+                regForm.submit();
+            });
+        });
+    }
 });
 </script>
 

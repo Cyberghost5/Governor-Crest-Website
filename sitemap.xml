@@ -39,9 +39,17 @@
     <!-- Contact Page -->
     <url>
         <loc>https://www.governorcrestlimited.com/contact</loc>
-        <lastmod>2025-11-25</lastmod>
+        <lastmod>2026-07-30</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+    </url>
+
+    <!-- Real Estate Conference 2026 Page -->
+    <url>
+        <loc>https://www.governorcrestlimited.com/conference</loc>
+        <lastmod>2026-07-30</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.95</priority>
     </url>
 
 </urlset>

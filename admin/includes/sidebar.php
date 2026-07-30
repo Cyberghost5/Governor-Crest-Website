@@ -42,6 +42,21 @@
             </a>
         </li>
         <li>
+            <a href="conference-registrations.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'conference-registrations.php' ? 'active' : ''; ?>">
+                <i class="bi bi-ticket-perforated"></i>Conf. Registrations
+            </a>
+        </li>
+        <li>
+            <a href="conference-guests.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'conference-guests.php' ? 'active' : ''; ?>">
+                <i class="bi bi-person-badge"></i>Conf. Special Guests
+            </a>
+        </li>
+        <li>
+            <a href="conference-scanner.php" class="<?php echo basename($_SERVER['PHP_SELF']) == 'conference-scanner.php' ? 'active' : ''; ?>">
+                <i class="bi bi-qr-code-scan"></i>Gate Ticket Scanner
+            </a>
+        </li>
+        <li>
             <a href="../" target="_blank">
                 <i class="bi bi-box-arrow-up-right"></i>View Website
             </a>
