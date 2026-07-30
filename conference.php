@@ -1,9 +1,9 @@
 <?php
 $current_page = 'conference';
 $page_title = 'Governor Crest Real Estate Conference 2026';
-$seo_title = 'Governor Crest Real Estate Conference 2026 | E4 Resorts Bauchi';
-$seo_description = 'Join Governor Crest Limited on August 15, 2026 at E4 Resorts, Bauchi, Bauchi State for Nigeria\'s premier real estate conference. Free registration, expert masterclasses, and live Q&A.';
-$seo_keywords = 'Governor Crest Real Estate Conference 2026, Bauchi real estate conference, real estate investment Nigeria, land title Bauchi, E4 Resorts Bauchi events, Governor Crest Limited';
+$seo_title = 'Governor Crest Real Estate Conference 2026 | Double 4 International Conference Center Bauchi';
+$seo_description = 'Join Governor Crest Limited on August 15, 2026 at Double 4 International Conference Center, Bauchi, Bauchi State for Nigeria\'s premier real estate conference. Free registration, expert masterclasses, and live Q&A.';
+$seo_keywords = 'Governor Crest Real Estate Conference 2026, Bauchi real estate conference, real estate investment Nigeria, land title Bauchi, Double 4 International Conference Center Bauchi events, Governor Crest Limited';
 
 $structured_data = json_encode([
     "@context" => "https://schema.org",
@@ -15,7 +15,7 @@ $structured_data = json_encode([
     "eventStatus" => "https://schema.org/EventScheduled",
     "location" => [
         "@type" => "Place",
-        "name" => "E4 Resorts",
+        "name" => "Double 4 International Conference Center",
         "address" => [
             "@type" => "PostalAddress",
             "streetAddress" => "Off Bauchi Club Road",
@@ -116,7 +116,7 @@ include 'includes/header.php';
                 <!-- Venue Badge -->
                 <div class="d-inline-flex align-items-center bg-dark bg-opacity-75 border border-warning px-4 py-2 rounded-pill mb-4 text-warning">
                     <i class="bi bi-geo-alt-fill me-2 fs-5"></i>
-                    <span class="fw-semibold fs-6">Venue: E4 Resorts, Off Bauchi Club Road, Bauchi, Bauchi State</span>
+                    <span class="fw-semibold fs-6">Venue: Double 4 International Conference Center, Off Bauchi Club Road, Bauchi, Bauchi State</span>
                 </div>
 
                 <!-- Countdown Timer -->
@@ -267,7 +267,7 @@ include 'includes/header.php';
             <div class="col-lg-8 text-center mb-5">
                 <span class="badge bg-dark text-warning px-3 py-2 fs-6 rounded-pill text-uppercase mb-2">Event Schedule</span>
                 <h2 class="display-5 fw-bold text-dark">Conference Agenda & Timetable</h2>
-                <p class="text-muted fs-5">August 15, 2026 • E4 Resorts, Bauchi</p>
+                <p class="text-muted fs-5">August 15, 2026 • Double 4 International Conference Center, Bauchi</p>
             </div>
         </div>
 
@@ -319,7 +319,7 @@ include 'includes/header.php';
                         <i class="bi bi-building"></i>
                     </div>
                     <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-3">Official Venue</span>
-                    <h3 class="fw-bold text-white mb-3">E4 Resorts</h3>
+                    <h3 class="fw-bold text-white mb-3">Double 4 International Conference Center</h3>
                     <p class="fs-6 text-light mb-4">
                         <i class="bi bi-geo-alt-fill text-warning me-2"></i>
                         Off Bauchi Club Road, Bauchi, Bauchi State, Nigeria.
@@ -378,7 +378,7 @@ include 'includes/header.php';
                 <div class="text-center mb-4">
                     <span class="badge bg-warning text-dark px-3 py-2 rounded-pill fw-bold text-uppercase">100% Free Admission</span>
                     <h4 class="fw-bold text-dark mt-2">Governor Crest Real Estate Conference 2026</h4>
-                    <p class="text-muted small">August 15, 2026 • E4 Resorts, Off Bauchi Club Road, Bauchi State</p>
+                    <p class="text-muted small">August 15, 2026 • Double 4 International Conference Center, Off Bauchi Club Road, Bauchi State</p>
                 </div>
 
                 <form id="conferenceRegForm" action="includes/conference-handler.php" method="POST">
