@@ -57,10 +57,10 @@ include 'includes/header.php';
                 <div class="col-lg-7">
                     <!-- Ticket Actions Bar -->
                     <div class="d-flex justify-content-between align-items-center mb-4 no-print">
-                        <a href="conference" class="btn btn-outline-dark rounded-pill px-4">
+                        <a href="conference" class="btn btn-outline-dark rounded-pill px-4 p-2">
                             <i class="bi bi-arrow-left me-2"></i> Back to Conference
                         </a>
-                        <button onclick="window.print()" class="btn btn-warning rounded-pill px-4 fw-bold shadow-sm">
+                        <button onclick="window.print()" class="btn btn-warning rounded-pill px-4 fw-bold shadow-sm p-2">
                             <i class="bi bi-printer-fill me-2"></i> Print / Download Ticket
                         </button>
                     </div>
@@ -70,7 +70,6 @@ include 'includes/header.php';
                         <!-- Top Header -->
                         <div class="bg-dark text-white p-4 d-flex justify-content-between align-items-center border-bottom border-4 border-warning">
                             <div class="d-flex align-items-center">
-                                <img src="images/logo.png" alt="Governor Crest Logo" height="35" class="me-3">
                                 <div>
                                     <h5 class="mb-0 text-warning fw-bold">Governor Crest Limited</h5>
                                     <small class="text-light opacity-75">Real Estate Conference 2026</small>
