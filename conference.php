@@ -196,21 +196,21 @@ include 'includes/header.php';
                             <div class="fs-3 text-warning me-3"><i class="bi bi-journal-bookmark-fill"></i></div>
                             <div>
                                 <h5 class="fw-bold">In-Depth Real Estate Masterclasses</h5>
-                                <p class="text-muted mb-0">Learn how to navigate land titles, avoid property fraud, and identify high-ROI real estate projects in Bauchi and across Nigeria.</p>
+                                <p class="mb-0">Learn how to navigate land titles, avoid property fraud, and identify high-ROI real estate projects in Bauchi and across Nigeria.</p>
                             </div>
                         </div>
                         <div class="d-flex mb-4">
                             <div class="fs-3 text-warning me-3"><i class="bi bi-chat-quote-fill"></i></div>
                             <div>
                                 <h5 class="fw-bold">Live Q&A Session</h5>
-                                <p class="text-muted mb-0">Directly ask our panel of seasoned experts any questions relating to land acquisition, building budgets, financing, and legal compliance.</p>
+                                <p class="mb-0">Directly ask our panel of seasoned experts any questions relating to land acquisition, building budgets, financing, and legal compliance.</p>
                             </div>
                         </div>
                         <div class="d-flex">
                             <div class="fs-3 text-warning me-3"><i class="bi bi-people-fill"></i></div>
                             <div>
                                 <h5 class="fw-bold">High-Value Networking</h5>
-                                <p class="text-muted mb-0">Connect with fellow investors, architects, government representatives, and business executives over breakfast & networking breaks.</p>
+                                <p class="mb-0">Connect with fellow investors, architects, government representatives, and business executives over breakfast & networking breaks.</p>
                             </div>
                         </div>
                     </div>
@@ -337,16 +337,7 @@ include 'includes/header.php';
             </div>
             <div class="col-lg-7">
                 <div class="map-wrapper shadow-lg">
-                    <div class="map-placeholder p-5 text-center">
-                        <div class="map-icon mb-3">
-                            <i class="bi bi-map-fill"></i>
-                        </div>
-                        <h4 class="fw-bold text-dark">Venue Location & Map</h4>
-                        <p class="text-muted mb-3">E4 Resorts, Off Bauchi Club Road, Bauchi State</p>
-                        <a href="https://maps.google.com/?q=E4+Resorts+Bauchi" target="_blank" class="btn btn-dark px-4 py-2 rounded-pill">
-                            <i class="bi bi-box-arrow-up-right me-2"></i> Open in Google Maps
-                        </a>
-                    </div>
+                    <iframe class="map-placeholder p-2" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.339260128106!2d9.810703174798068!3d10.314710489807378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1054d7570055358d%3A0x13638fcf583e7c42!2sDouble%204%20International%20Conference%20Center!5e0!3m2!1sen!2sng!4v1785400612409!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
             </div>
         </div>

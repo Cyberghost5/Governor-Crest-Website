@@ -204,8 +204,8 @@ a.nav-link.active {
 /* CTA Section */
 .cta-section {
     background-color: var(--dark-color);
-    background-image: linear-gradient(135deg, rgba(44, 44, 44, 0.95), rgba(44, 44, 44, 0.85)), 
-                      url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200');
+    background-image: linear-gradient(135deg, rgba(44, 44, 44, 0.95), rgba(44, 44, 44, 0.85)),
+        url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200');
     background-size: cover;
     background-position: center;
 }
@@ -215,7 +215,8 @@ a.nav-link.active {
     background-color: #1a1a1a !important;
 }
 
-.footer h5, .footer h6 {
+.footer h5,
+.footer h6 {
     font-weight: 600;
 }
 
@@ -379,7 +380,7 @@ section {
     .about-hero-section {
         padding: 120px 0 80px;
     }
-    
+
     .about-hero-section h1 {
         font-size: 2rem;
     }
@@ -445,7 +446,7 @@ section {
     .services-hero-section {
         padding: 120px 0 80px;
     }
-    
+
     .services-hero-section h1 {
         font-size: 2rem;
     }
@@ -517,7 +518,7 @@ section {
     .projects-hero-section {
         padding: 120px 0 80px;
     }
-    
+
     .projects-hero-section h1 {
         font-size: 2rem;
     }
@@ -655,7 +656,7 @@ section {
     .contact-hero-section {
         padding: 120px 0 80px;
     }
-    
+
     .contact-hero-section h1 {
         font-size: 2rem;
     }
@@ -706,7 +707,7 @@ section {
 }
 
 .countdown-box {
-    background: rgba(0, 0, 0, 0.65);
+    /* background: rgba(0, 0, 0, 0.65); */
     border: 1px solid rgba(255, 193, 7, 0.3);
     backdrop-filter: blur(10px);
     border-radius: 12px;
@@ -869,4 +870,3 @@ section {
     padding-bottom: 1rem;
     margin-bottom: 1.5rem;
 }
-
